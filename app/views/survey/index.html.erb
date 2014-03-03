@@ -1,0 +1,27 @@
+<h1>Survey</h1>
+
+<form>
+  <input type="text" ng-model="newEntry.name">
+</form> 
+
+{{newEntry.name}}
+
+<div ng-controller="SurveyCtrl">
+
+	<ul>
+		<li ng-repeat = "suplier in supliers" >
+			{{suplier.id}}
+		</li>
+	</ul>
+</div>
+
+<div ng-controller="QuestionCtrl">
+	<table>
+		<tr ng-repeat ="question in questions">
+				<th> {{question.text}}</th>
+				<td ng-repeat = "answer in answers">
+					{{answer.value}}
+				</td>
+		</tr>
+	</table>	
+</div>
